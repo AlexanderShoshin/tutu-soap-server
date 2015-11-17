@@ -25,11 +25,11 @@ public class Terminal {
                              @WebParam(name = "surname") String surname,
                              @WebParam(name = "patronymic") String patronymic,
                              @WebParam(name = "birthDate") Calendar birthDate,
-                             @WebParam(name = "destinationPoint") String destinationPoint,
                              @WebParam(name = "departurePoint") String departurePoint,
-                             @WebParam(name = "destinationTime") Calendar destinationTime,
-                             @WebParam(name = "departureTime") Calendar departureTime) {
-        System.out.println("add ticket");
+                             @WebParam(name = "destinationPoint") String destinationPoint,
+                             @WebParam(name = "departureTime") Calendar departureTime,
+                             @WebParam(name = "destinationTime") Calendar destinationTime) {
+        
         Passenger passenger = new Passenger(name,
                                             surname,
                                             patronymic,
