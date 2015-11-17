@@ -9,7 +9,7 @@ public class Ticket {
     private String departurePoint;
     private Calendar destinationTime;
     private Calendar departureTime;
-    private int price;
+    private Price price;
     private TicketStatus status;
     private Passenger passenger;
     
@@ -46,10 +46,10 @@ public class Ticket {
     public void setDepartureTime(Calendar departureTime) {
         this.departureTime = departureTime;
     }
-    public int getPrice() {
+    public Price getPrice() {
         return price;
     }
-    public void setPrice(int price) {
+    public void setPrice(Price price) {
         this.price = price;
     }
     public TicketStatus getStatus() {

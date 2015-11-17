@@ -14,6 +14,7 @@ import shoshin.alex.tutusoap.data.TicketsBank;
 import shoshin.alex.tutusoap.errors.AlreadyPaidException;
 import shoshin.alex.tutusoap.errors.ChangeStatusException;
 import shoshin.alex.tutusoap.errors.TicketDoesNotExistException;
+import shoshin.alex.tutusoap.utils.TicketCalculator;
 
 @WebService
 public class Terminal {
@@ -25,11 +26,11 @@ public class Terminal {
                              @WebParam(name = "surname") String surname,
                              @WebParam(name = "patronymic") String patronymic,
                              @WebParam(name = "birthDate") Calendar birthDate,
-                             @WebParam(name = "destinationPoint") String destinationPoint,
                              @WebParam(name = "departurePoint") String departurePoint,
-                             @WebParam(name = "destinationTime") Calendar destinationTime,
-                             @WebParam(name = "departureTime") Calendar departureTime) {
-        System.out.println("add ticket");
+                             @WebParam(name = "destinationPoint") String destinationPoint,
+                             @WebParam(name = "departureTime") Calendar departureTime,
+                             @WebParam(name = "destinationTime") Calendar destinationTime) {
+        
         Passenger passenger = new Passenger(name,
                                             surname,
                                             patronymic,
@@ -54,7 +55,7 @@ public class Terminal {
         ticket.setDeparturePoint(departurePoint);
         ticket.setDestinationTime(destinationTime);
         ticket.setDepartureTime(departureTime);
-        ticket.setPrice(100);
+        ticket.setPrice(TicketCalculator.getDefaultPrice());
         return ticket;
     }
     
