@@ -14,14 +14,36 @@ public class Passenger {
         this.patronymic = patronymic;
         this.birthDate = birthDate;
     }
-    
+
     public String getName() {
         return name;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getSurname() {
         return surname;
     }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
     public String getPatronymic() {
         return patronymic;
+    }
+
+    public void setPatronymic(String patronymic) {
+        this.patronymic = patronymic;
+    }
+
+    public Calendar getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(Calendar birthDate) {
+        this.birthDate = birthDate;
     }
 }
