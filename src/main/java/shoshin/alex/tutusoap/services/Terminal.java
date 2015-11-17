@@ -14,6 +14,7 @@ import shoshin.alex.tutusoap.data.TicketsBank;
 import shoshin.alex.tutusoap.errors.AlreadyPaidException;
 import shoshin.alex.tutusoap.errors.ChangeStatusException;
 import shoshin.alex.tutusoap.errors.TicketDoesNotExistException;
+import shoshin.alex.tutusoap.utils.TicketCalculator;
 
 @WebService
 public class Terminal {
@@ -54,7 +55,7 @@ public class Terminal {
         ticket.setDeparturePoint(departurePoint);
         ticket.setDestinationTime(destinationTime);
         ticket.setDepartureTime(departureTime);
-        ticket.setPrice(100);
+        ticket.setPrice(TicketCalculator.getDefaultPrice());
         return ticket;
     }
     
