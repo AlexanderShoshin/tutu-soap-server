@@ -1,9 +1,9 @@
 package shoshin.alex.tutusoap.data;
 
 import java.util.Calendar;
-import java.util.Random;
 
 public class Ticket {
+    private static int lastId = 0;
     private int id;
     private String destinationPoint;
     private String departurePoint;
@@ -14,8 +14,8 @@ public class Ticket {
     private Passenger passenger;
     
     public Ticket() {
-        Random rnd = new Random();
-        id = rnd.nextInt();
+        lastId++;
+        id = lastId;
         status = TicketStatus.RESERVED;
     }
     
