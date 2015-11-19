@@ -3,6 +3,7 @@ package shoshin.alex.tutusoap.data;
 import java.util.Calendar;
 
 public class Ticket {
+//    примитив уже будет 0 при инициализации
     private static int lastId = 0;
     private int id;
     private String destinationPoint;
@@ -12,7 +13,9 @@ public class Ticket {
     private Price price;
     private TicketStatus status;
     private Passenger passenger;
-    
+
+//    как портатип ок. Но в идеале было бы, чтобы тикет не сам себя инициализировал, а былы бы некая фабрика тикетов.
+//    она бы как раз и знала, с каким id, статусом и т.п. создавать объект
     public Ticket() {
         lastId++;
         id = lastId;
